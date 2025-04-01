@@ -1,0 +1,19 @@
+name: Code Review Automation
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  review-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print a message
+        run: echo "Code review automation triggered!"
